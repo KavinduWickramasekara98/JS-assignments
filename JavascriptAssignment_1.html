@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavascriptAssignment_1</title>
+
+    <script>
+        
+// Q1
+
+let year = prompt("Enter year:");
+
+if (year % 4 == 0) {
+    if (year % 100 == 0) {
+        if (year % 400 == 0) {
+            console.log(year + " is a leap year");
+        }
+        else {
+            console.log(year + " is not a leap year");
+        }
+    }
+    else {
+        console.log(year + " is a leap year");
+    }
+}
+else {
+    console.log(year + " is not a leap year");
+}
+
+//Q2
+
+function celsiusToFahrenheit(c) {
+    let f = (c * 9 / 5) + 32;
+    return f;
+  }
+  
+  function fahrenheitToCelsius(f) {
+    let c = (f - 32) * 5 / 9;
+    return c;
+  }
+  
+  let t = prompt("Enter a temperature:");
+  let unit = prompt("Enter temperature (C or F):");
+  
+  if (unit == "C") {
+    let f = celsiusToFahrenheit(t);
+    console.log(t + "°C is " + f + "°F");
+  }
+  else if (unit == "F") {
+    let c = fahrenheitToCelsius(t);
+    console.log(t + "°F is " + c + "°C");
+  }
+  else {
+    console.error("Please enter C or F");
+  }
+  
+//Q3
+
+
+let num = prompt("Enter a number:");
+let f = 1;
+  for (let i = 1; i <= num; i++) {
+    f *= i;
+  }
+  console.log(num+"'\s factorial is "+f);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
