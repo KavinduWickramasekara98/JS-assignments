@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//Q1 
+        function triangleType(sideA, sideB, sideC) {
+            if (sideA === sideB && sideB === sideC) {
+                return "equilateral";
+            } else if (sideA === sideB || sideA === sideC || sideB === sideC) {
+                return "isosceles";
+            } else {
+                return "scalene";
+            }
+            
+
+}
+console.log(triangleType(6, 6, 6)); 
+console.log(triangleType(3, 6, 6));
+console.log(triangleType(1, 2, 3)); 
+
+//Q2
+
+function findGrade(marks) {
+  switch(true) {
+    case (marks >= 90 && marks <= 100):
+      return "S grade";
+    case (marks >= 80 && marks < 90):
+      return "A grade";
+    case (marks >= 70 && marks < 80):
+      return "B grade";
+    case (marks >= 60 && marks < 70):
+      return "C grade";
+    case (marks >= 50 && marks < 60):
+      return "D grade";
+    case (marks >= 40 && marks < 50):
+      return "E grade";
+    case (marks >= 0 && marks < 40):
+      return "Student has failed";
+    default:
+      return "Invalid marks";
+  }
+}
+
+console.log(findGrade(95)); 
+console.log(findGrade(83)); 
+console.log(findGrade(72)); 
+console.log(findGrade(64)); 
+console.log(findGrade(57)); 
+console.log(findGrade(43)); 
+console.log(findGrade(25)); 
+console.log(findGrade(-10)); 
+
+
+//Q3
+
+let sum = 0;
+for (let i = 1; i < 1000; i++) {
+  if (i % 3 === 0 || i % 5 === 0) {
+    sum += i;
+  }
+}
+console.log(sum);
+
+//Q4
+function prime(start, end) {
+  const primes = [];
+  for (let i = start; i <= end; i++) {
+    let isPrime = true;
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      primes.push(i);
+    }
+  }
+
+  for (let i = 0; i < primes.length; i++) {
+    let factorial = 1;
+    for (let j = primes[i]; j > 1; j--) {
+      factorial *= j;
+    }
+    console.log(`Factorial of ${primes[i]} is ${factorial}`);
+  }
+}
+prime(1, 100);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
