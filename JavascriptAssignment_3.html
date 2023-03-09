@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Q1
+        let num = 1;
+        for (let i = 1; i <= 4; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+            row += num + " ";
+            num++;
+            
+            }
+            console.log(row);
+        }
+        //Q2
+
+        let num2 = parseInt(prompt("Enter number: "));
+        let sum = 0;
+        let temp = num2;
+        while (temp > 0) {
+            let digit = temp % 10;
+            sum += Math.pow(digit, 3);
+            temp = Math.floor(temp / 10);
+        }
+        if (num2 === sum) {
+            console.log(num2 + " Armstrong number");
+        } else {
+            console.log(num2 + "  not Armstrong number");
+        }
+
+        //Q3
+        let num3 = parseInt(prompt("Enter number: "));
+        let temp3 = num3;
+        let sum3 = 0;
+        while (temp3 > 0) {
+            let digit = temp3 % 10;
+            sum3 += factorial(digit);
+            temp3 = Math.floor(temp3 / 10);
+        }
+        if (num3=== sum3) {
+            console.log(num3 + " special number");
+        } else {
+        console.log(num3 + " not special number");
+        }
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
